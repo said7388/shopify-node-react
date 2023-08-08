@@ -1,0 +1,131 @@
+@use "sass:map";
+
+// background colors
+.bg-blue {
+  background-color: $color-blue;
+}
+.bg-blue-dark {
+  background-color: $color-blue-dark;
+}
+.bg-purple {
+  background-color: $color-purple;
+}
+.bg-purple-dark {
+  background-color: $color-purple-dark;
+}
+.bg-green {
+  background-color: $color-green;
+}
+.bg-green-dark {
+  background-color: $color-green-dark;
+}
+.bg-pink {
+  background-color: $color-pink;
+}
+.bg-pink-dark {
+  background-color: $color-pink-dark;
+}
+
+// button styles
+.custom-btn {
+  font-size: 18px;
+  color: $color-text-primary;
+  padding: 6px 27px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 500;
+}
+.custom-btn:hover {
+  background-color: $color-primary;
+  filter: brightness(96%);
+}
+.icon-btn {
+  font-size: 18px;
+  color: $color-text-primary;
+  border: none;
+  border-radius: 10px;
+  padding: 6px 27px;
+  font-weight: 500;
+}
+.button-primary-outlined {
+}
+.button-secondary-outlined {
+}
+.btn-hover:hover {
+  filter: brightness(96%);
+}
+
+// checkbox style
+.form-check {
+  font-size: 18px;
+  color: #1b1b1b;
+  font-weight: 500;
+  margin-top: 0px !important;
+  input {
+    border: 1px solid #7fc9c7;
+    border-radius: 6px;
+    width: 20px;
+    height: 20px;
+  }
+  .form-check-input:checked[type="checkbox"] {
+    --bs-form-check-bg-image: url("https://i.ibb.co/xLy6mqf/check.png");
+    background-color: rgba(64, 152, 255, 0.1);
+    border: 1px solid #7fc9c7;
+  }
+}
+
+// tabs style
+.custom-tabs {
+  border: 0;
+  .nav-item {
+    .nav-link {
+      max-width: 245px;
+      font-size: 16px;
+      font-weight: 500;
+      color: rgba(27, 27, 27, 0.5);
+      background-color: rgba(193, 218, 255, 0.2);
+    }
+    .nav-link.active {
+      color: #1b1b1b;
+      background-color: $color-blue;
+    }
+  }
+  .nav-item:first-child button {
+    border-radius: 100px 0 0 100px;
+  }
+  .nav-item:last-child button {
+    border-radius: 0 100px 100px 0;
+  }
+}
+
+// form styles
+.custom-form {
+  .form-label {
+    font-size: 16px;
+    font-weight: 400;
+    color: #1b1b1b;
+  }
+  .form-control {
+    font-size: 16px;
+    color: #808080;
+    font-weight: 400;
+    padding: 9px 16px;
+    border-color: #1b1b1b;
+  }
+  .form-select {
+    border-color: #1b1b1b;
+    padding: 9px 16px;
+    font-size: 16px;
+    color: #808080;
+    font-weight: 400;
+  }
+  .form-toggle-password {
+    width: 40px;
+    position: absolute;
+    top: 70%;
+    right: 18px;
+    transform: translateY(-50%);
+    background-color: #ffffff;
+    border: 0;
+  }
+}

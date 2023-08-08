@@ -1,0 +1,41 @@
+@use "sass:map";
+
+.navbar {
+  background-color: rgba(193, 218, 255, 0.2);
+  padding: 13px 12px 13px 25px;
+  .logo {
+    display: flex;
+    width: 100%;
+    .logo-text {
+      font-size: $font-24;
+      font-weight: 700;
+    }
+  }
+  .header-dropdown {
+    .btn-group {
+      padding: 0 12px;
+      border-radius: 15px;
+      .dropdown-btn {
+        background: #ecf1fe;
+        border: none;
+        border-radius: 50%;
+        font-size: 30px;
+        color: $color-text-primary;
+        font-weight: 600;
+        width: 44px;
+        line-height: 0;
+        height: 44px;
+      }
+      .dropdown-icon {
+        font-size: 20px;
+        font-weight: bold;
+      }
+      .dropdown-menu-lg-end {
+        left: -57px;
+      }
+    }
+    .btn-group:hover {
+      background-color: rgba(193, 218, 255, 0.3);
+    }
+  }
+}

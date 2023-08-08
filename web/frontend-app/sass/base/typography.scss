@@ -1,0 +1,46 @@
+@use "sass:map";
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap");
+$theme-fonts: (
+  "primary-font": "Work Sans",
+);
+
+.title-text-primary {
+  font-size: 36px;
+  line-height: 42px;
+  color: $color-text-primary;
+  font-weight: 700;
+}
+.title-text-secondary {
+  font-size: 32px;
+  line-height: 37px;
+  color: $color-text-primary;
+}
+.body-text-primary {
+  font-size: 24px;
+  line-height: 30px;
+  color: $color-text-primary;
+}
+.body-text-secondary {
+  font-size: 20px;
+  line-height: 25px;
+  color: $color-text-primary;
+}
+.paragraph-text-primary {
+  font-size: 18px;
+  line-height: 20px;
+  color: $color-text-primary;
+}
+.paragraph-text-secondary {
+  font-size: 16px;
+  line-height: 20px;
+  color: $color-text-primary;
+}
+.caption-text-primary {
+  font-size: 14px;
+  line-height: 20px;
+  color: $color-text-primary;
+}
+
+.link {
+  text-decoration: none;
+}

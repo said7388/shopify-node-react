@@ -1,0 +1,14 @@
+.banner-line-break {
+  display: block;
+}
+
+@media (min-width: 502px) and (max-width: 1043px) {
+  .banner-line-break {
+    display: none;
+  }
+}
+@media (min-width: 200px) and (max-width: 439px) {
+  .banner-line-break {
+    display: none;
+  }
+}
