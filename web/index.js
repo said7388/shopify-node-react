@@ -1,12 +1,16 @@
 // @ts-check
-import { join } from "path";
-import { readFileSync } from "fs";
 import express from "express";
+import { readFileSync } from "fs";
+import { join } from "path";
 import serveStatic from "serve-static";
 
-import shopify from "./shopify.js";
-import productCreator from "./product-creator.js";
+import dotEnv from 'dotenv';
+import connectDb from "./config/db.config.js";
 import GDPRWebhookHandlers from "./gdpr.js";
+import productCreator from "./product-creator.js";
+import shopify from "./shopify.js";
+
+dotEnv.config();
 
 const PORT = parseInt(
   process.env.BACKEND_PORT || process.env.PORT || "3000",
@@ -18,6 +22,9 @@ const STATIC_PATH =
     ? `${process.cwd()}/frontend/dist`
     : `${process.cwd()}/frontend/`;
 
+
+// Mongoose
+connectDb()
 const app = express();
 
 // Set up Shopify authentication and webhook handling
@@ -44,6 +51,23 @@ app.get("/api/products/count", async (_req, res) => {
     session: res.locals.shopify.session,
   });
   res.status(200).send(countData);
+});
+
+// Endpoint to retrieve products
+app.get("/api/products", async (_req, res) => {
+  try {
+    console.log(res.locals.shopify.session.shop, "test")
+    // Fetch products using the Shopify API
+    const products = await shopify.api.rest.Product.all({
+      session: res.locals.shopify.session,
+    });
+
+    // Send the list of products as a JSON response
+    res.status(200).json(products);
+  } catch (error) {
+    console.error("Error fetching products:", error);
+    res.status(500).json({ error: "Error fetching products" });
+  }
 });
 
 app.get("/api/products/create", async (_req, res) => {

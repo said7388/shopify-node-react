@@ -4,6 +4,8 @@
 
 # Dependency directory
 node_modules
+web/frontend/node_modules
+web/node_modules
 
 # Test coverage directory
 coverage
