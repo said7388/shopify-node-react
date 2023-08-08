@@ -6,9 +6,9 @@ import serveStatic from "serve-static";
 
 import dotEnv from 'dotenv';
 import connectDb from "./config/db.config.js";
-import GDPRWebhookHandlers from "./gdpr.js";
-import productCreator from "./product-creator.js";
-import shopify from "./shopify.js";
+import GDPRWebhookHandlers from "./server/gdpr.js";
+import productCreator from "./server/product-creator.js";
+import shopify from "./server/shopify.js";
 
 dotEnv.config();
 

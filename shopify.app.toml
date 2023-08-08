@@ -2,7 +2,7 @@
 
 name = "my-node-app"
 client_id = "3307b03ef529b67d4f045dc1b2490cf7"
-application_url = "https://functionality-adopted-ra-light.trycloudflare.com"
+application_url = "https://reserved-appear-cookie-badge.trycloudflare.com"
 embedded = true
 
 [access_scopes]
@@ -11,9 +11,9 @@ scopes = "write_products"
 
 [auth]
 redirect_urls = [
-  "https://functionality-adopted-ra-light.trycloudflare.com/auth/callback",
-  "https://functionality-adopted-ra-light.trycloudflare.com/auth/shopify/callback",
-  "https://functionality-adopted-ra-light.trycloudflare.com/api/auth/callback"
+  "https://reserved-appear-cookie-badge.trycloudflare.com/auth/callback",
+  "https://reserved-appear-cookie-badge.trycloudflare.com/auth/shopify/callback",
+  "https://reserved-appear-cookie-badge.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]
