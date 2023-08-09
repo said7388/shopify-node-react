@@ -5,9 +5,9 @@ import { readFileSync } from "fs";
 import { join } from "path";
 import serveStatic from "serve-static";
 import connectDb from "./config/db.config.js";
-import GDPRWebhookHandlers from "./gdpr.js";
 import productsRoutes from "./server/products/products-route.js";
-import shopify from "./server/shopify.js";
+import GDPRWebhookHandlers from "./server/services/gdpr.js";
+import shopify from "./server/services/shopify.js";
 
 dotEnv.config();
 
@@ -22,8 +22,9 @@ const STATIC_PATH =
     : `${process.cwd()}/frontend-app/`;
 
 
-// Mongoose
+// Mongoose Connection
 connectDb()
+
 const app = express();
 
 // Set up Shopify authentication and webhook handling

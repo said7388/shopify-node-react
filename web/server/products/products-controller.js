@@ -1,4 +1,4 @@
-import shopify from "../shopify.js";
+import shopify from "../services/shopify.js";
 export const getAllProducts = async (req, res) => {
   try {
     // console.log(res.locals.shopify.session.shop, "test")
